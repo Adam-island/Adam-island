@@ -1,0 +1,20 @@
+import os  # Módulo para interactuar con el sistema operativo
+import subprocess  # Módulo para ejecutar comandos del sistema
+import platform  # Módulo para obtener información del sistema
+
+# 1. Obtener información del sistema operativo
+sistema = platform.system()
+print(f"El sistema operativo actual es: {sistema}")
+
+# 2. Crear un directorio nuevo
+directorio = "mi_directorio_prueba"
+if not os.path.exists(directorio):
+    os.makedirs(directorio)
+    print(f"Directorio '{directorio}' creado exitosamente.")
+else:
+    print(f"El directorio '{directorio}' ya existe.")
+
+# 3. Ejecutar un comando del sistema
+comando = "ls" if sistema != "Windows" else "dir"
+resultado = subprocess.getoutput(comando)
+print(f"Resultado del comando '{comando}':\n{resultado}")

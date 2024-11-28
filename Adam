@@ -1,0 +1,14 @@
+#!/bin/bash
+# Script de ejemplo que utiliza tres comandos básicos
+
+# Comando 1: Mostrar el contenido del directorio actual
+echo "Contenido del directorio actual:"
+ls -l  # Lista detallada de archivos y carpetas
+
+# Comando 2: Crear un nuevo archivo de texto
+echo "Creando un archivo de texto llamado ejemplo.txt..."
+echo "Este es un archivo de ejemplo." > ejemplo.txt
+
+# Comando 3: Contar las líneas del archivo creado
+echo "El archivo ejemplo.txt tiene el siguiente número de líneas:"
+wc -l ejemplo.txt  # Cuenta las líneas en el archivo

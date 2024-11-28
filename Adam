@@ -1,20 +1,14 @@
-import os  # Módulo para interactuar con el sistema operativo
-import subprocess  # Módulo para ejecutar comandos del sistema
-import platform  # Módulo para obtener información del sistema
+#!/bin/bash
+# Script de ejemplo que utiliza tres comandos básicos
 
-# 1. Obtener información del sistema operativo
-sistema = platform.system()
-print(f"El sistema operativo actual es: {sistema}")
+# Comando 1: Mostrar el contenido del directorio actual
+echo "Contenido del directorio actual:"
+ls -l  # Lista detallada de archivos y carpetas
 
-# 2. Crear un directorio nuevo
-directorio = "mi_directorio_prueba"
-if not os.path.exists(directorio):
-    os.makedirs(directorio)
-    print(f"Directorio '{directorio}' creado exitosamente.")
-else:
-    print(f"El directorio '{directorio}' ya existe.")
+# Comando 2: Crear un nuevo archivo de texto
+echo "Creando un archivo de texto llamado ejemplo.txt..."
+echo "Este es un archivo de ejemplo." > ejemplo.txt
 
-# 3. Ejecutar un comando del sistema
-comando = "ls" if sistema != "Windows" else "dir"
-resultado = subprocess.getoutput(comando)
-print(f"Resultado del comando '{comando}':\n{resultado}")
+# Comando 3: Contar las líneas del archivo creado
+echo "El archivo ejemplo.txt tiene el siguiente número de líneas:"
+wc -l ejemplo.txt  # Cuenta las líneas en el archivo

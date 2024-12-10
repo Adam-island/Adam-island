@@ -1,8 +1,0 @@
-# Obtener una lista de archivos en el directorio "C:\Origen"
-Get-ChildItem -Path "C:\Origen" 
-
-# Mover un archivo específico a otra ubicación
-Move-Item -Path "C:\Origen\ArchivoMover.txt" -Destination "C:\Destino\ArchivoMover.txt"
-
-# Eliminar un archivo de la carpeta de origen
-Remove-Item -Path "C:\Origen\ArchivoEliminar.txt"
